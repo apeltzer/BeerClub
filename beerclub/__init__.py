@@ -4,13 +4,13 @@ A web application to keep track of the beer purchases for registered users.
 
 import os
 
-__version__ = '2.1.2'
+__version__ = '2.1.3'
 
 settings = dict(
     VERSION=__version__,
     ROOT_DIR=os.path.dirname(__file__),
     SITE_NAME='Beer Club',
-    BASE_URL='http://localhost:8888',
+    BASE_URL='http://qbic-drinks.am10.uni-tuebingen.de:8888',
     GITHUB_HREF="https://github.com/pekrau/BeerClub",
     LOGGING_DEBUG=False,
     TORNADO_DEBUG=False,
@@ -63,12 +63,6 @@ settings = dict(
              description='One can or bottle of beer.'),
     ],
     PURCHASE=[
-        dict(identifier='cash',
-             change=False,
-             label='cash',
-             style='success',
-             action='I paid cash.',
-             description='I paid cash for one %s.'),
         dict(identifier='credit',
              change=True,
              label='credit',
@@ -85,7 +79,7 @@ settings = dict(
         dict(identifier='bank',
              label='Bank account transfer.'),
     ],
-    CURRENCY='kr',
+    CURRENCY='EUR',
     MONEY_DECIMAL_PLACES=2,
     MONEY_DECIMAL_POINT='.',
     MONEY_THOUSAND_DELIMITER=',',
